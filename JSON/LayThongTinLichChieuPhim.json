@@ -1,0 +1,1033 @@
+{
+  "heThongRapChieu": [
+    {
+      "cumRapChieu": [
+        {
+          "lichChieuPhim": [
+            {
+              "maLichChieu": "40071",
+              "maRap": "482",
+              "tenRap": "Rạp 2",
+              "ngayChieuGioChieu": "2019-01-01T10:10:00",
+              "giaVe": 100000,
+              "thoiLuong": 120
+            },
+            {
+              "maLichChieu": "40074",
+              "maRap": "481",
+              "tenRap": "Rạp 1",
+              "ngayChieuGioChieu": "2019-01-01T10:10:00",
+              "giaVe": 100000,
+              "thoiLuong": 120
+            }
+          ],
+          "maCumRap": "bhd-star-cineplex-vincom-le-van-viet",
+          "tenCumRap": "BHD Star Cineplex - Vincom Lê Văn Việt",
+          "hinhAnh": null
+        },
+        {
+          "lichChieuPhim": [
+            {
+              "maLichChieu": "40072",
+              "maRap": "497",
+              "tenRap": "Rạp 7",
+              "ngayChieuGioChieu": "2019-01-01T00:10:00",
+              "giaVe": 100000,
+              "thoiLuong": 120
+            },
+            {
+              "maLichChieu": "40073",
+              "maRap": "496",
+              "tenRap": "Rạp 6",
+              "ngayChieuGioChieu": "2019-01-01T04:10:00",
+              "giaVe": 100000,
+              "thoiLuong": 120
+            }
+          ],
+          "maCumRap": "bhd-star-cineplex-vincom-quang-trung",
+          "tenCumRap": "BHD Star Cineplex - Vincom Quang Trung",
+          "hinhAnh": null
+        },
+        {
+          "lichChieuPhim": [
+            {
+              "maLichChieu": "40306",
+              "maRap": "461",
+              "tenRap": "Rạp 1",
+              "ngayChieuGioChieu": "2020-04-06T08:03:00",
+              "giaVe": 75000,
+              "thoiLuong": 120
+            }
+          ],
+          "maCumRap": "bhd-star-cineplex-bitexco",
+          "tenCumRap": "BHD Star Cineplex - Bitexco",
+          "hinhAnh": null
+        }
+      ],
+      "maHeThongRap": "BHDStar",
+      "tenHeThongRap": "BHD Star Cineplex",
+      "logo": "http://movie0706.cybersoft.edu.vn/hinhanh/bhd-star-cineplex.png"
+    },
+    {
+      "cumRapChieu": [
+        {
+          "lichChieuPhim": [
+            {
+              "maLichChieu": "25819",
+              "maRap": "647",
+              "tenRap": "Rạp 7",
+              "ngayChieuGioChieu": "2019-01-01T10:10:00",
+              "giaVe": 75000,
+              "thoiLuong": 120
+            },
+            {
+              "maLichChieu": "25820",
+              "maRap": "647",
+              "tenRap": "Rạp 7",
+              "ngayChieuGioChieu": "2019-01-01T12:10:00",
+              "giaVe": 75000,
+              "thoiLuong": 120
+            },
+            {
+              "maLichChieu": "25821",
+              "maRap": "647",
+              "tenRap": "Rạp 7",
+              "ngayChieuGioChieu": "2019-01-01T14:10:00",
+              "giaVe": 75000,
+              "thoiLuong": 120
+            },
+            {
+              "maLichChieu": "25822",
+              "maRap": "647",
+              "tenRap": "Rạp 7",
+              "ngayChieuGioChieu": "2019-01-01T16:10:00",
+              "giaVe": 75000,
+              "thoiLuong": 120
+            },
+            {
+              "maLichChieu": "25823",
+              "maRap": "647",
+              "tenRap": "Rạp 7",
+              "ngayChieuGioChieu": "2019-01-01T18:10:00",
+              "giaVe": 75000,
+              "thoiLuong": 120
+            },
+            {
+              "maLichChieu": "25824",
+              "maRap": "647",
+              "tenRap": "Rạp 7",
+              "ngayChieuGioChieu": "2019-01-01T20:10:00",
+              "giaVe": 75000,
+              "thoiLuong": 120
+            },
+            {
+              "maLichChieu": "25825",
+              "maRap": "647",
+              "tenRap": "Rạp 7",
+              "ngayChieuGioChieu": "2019-01-02T10:10:00",
+              "giaVe": 75000,
+              "thoiLuong": 120
+            },
+            {
+              "maLichChieu": "25826",
+              "maRap": "647",
+              "tenRap": "Rạp 7",
+              "ngayChieuGioChieu": "2019-01-02T12:10:00",
+              "giaVe": 75000,
+              "thoiLuong": 120
+            },
+            {
+              "maLichChieu": "25827",
+              "maRap": "647",
+              "tenRap": "Rạp 7",
+              "ngayChieuGioChieu": "2019-01-02T14:10:00",
+              "giaVe": 75000,
+              "thoiLuong": 120
+            },
+            {
+              "maLichChieu": "25828",
+              "maRap": "647",
+              "tenRap": "Rạp 7",
+              "ngayChieuGioChieu": "2019-01-02T16:10:00",
+              "giaVe": 75000,
+              "thoiLuong": 120
+            },
+            {
+              "maLichChieu": "25829",
+              "maRap": "647",
+              "tenRap": "Rạp 7",
+              "ngayChieuGioChieu": "2019-01-02T18:10:00",
+              "giaVe": 75000,
+              "thoiLuong": 120
+            },
+            {
+              "maLichChieu": "25830",
+              "maRap": "647",
+              "tenRap": "Rạp 7",
+              "ngayChieuGioChieu": "2019-01-02T20:10:00",
+              "giaVe": 75000,
+              "thoiLuong": 120
+            },
+            {
+              "maLichChieu": "25831",
+              "maRap": "647",
+              "tenRap": "Rạp 7",
+              "ngayChieuGioChieu": "2019-01-03T10:10:00",
+              "giaVe": 75000,
+              "thoiLuong": 120
+            },
+            {
+              "maLichChieu": "25832",
+              "maRap": "647",
+              "tenRap": "Rạp 7",
+              "ngayChieuGioChieu": "2019-01-03T12:10:00",
+              "giaVe": 75000,
+              "thoiLuong": 120
+            },
+            {
+              "maLichChieu": "25833",
+              "maRap": "647",
+              "tenRap": "Rạp 7",
+              "ngayChieuGioChieu": "2019-01-03T14:10:00",
+              "giaVe": 75000,
+              "thoiLuong": 120
+            },
+            {
+              "maLichChieu": "25834",
+              "maRap": "647",
+              "tenRap": "Rạp 7",
+              "ngayChieuGioChieu": "2019-01-03T16:10:00",
+              "giaVe": 75000,
+              "thoiLuong": 120
+            },
+            {
+              "maLichChieu": "25835",
+              "maRap": "647",
+              "tenRap": "Rạp 7",
+              "ngayChieuGioChieu": "2019-01-03T18:10:00",
+              "giaVe": 75000,
+              "thoiLuong": 120
+            },
+            {
+              "maLichChieu": "25836",
+              "maRap": "647",
+              "tenRap": "Rạp 7",
+              "ngayChieuGioChieu": "2019-01-03T20:10:00",
+              "giaVe": 75000,
+              "thoiLuong": 120
+            },
+            {
+              "maLichChieu": "25837",
+              "maRap": "647",
+              "tenRap": "Rạp 7",
+              "ngayChieuGioChieu": "2019-01-04T10:10:00",
+              "giaVe": 75000,
+              "thoiLuong": 120
+            },
+            {
+              "maLichChieu": "25838",
+              "maRap": "647",
+              "tenRap": "Rạp 7",
+              "ngayChieuGioChieu": "2019-01-04T12:10:00",
+              "giaVe": 75000,
+              "thoiLuong": 120
+            },
+            {
+              "maLichChieu": "25839",
+              "maRap": "647",
+              "tenRap": "Rạp 7",
+              "ngayChieuGioChieu": "2019-01-04T14:10:00",
+              "giaVe": 75000,
+              "thoiLuong": 120
+            },
+            {
+              "maLichChieu": "25840",
+              "maRap": "647",
+              "tenRap": "Rạp 7",
+              "ngayChieuGioChieu": "2019-01-04T16:10:00",
+              "giaVe": 75000,
+              "thoiLuong": 120
+            },
+            {
+              "maLichChieu": "25841",
+              "maRap": "647",
+              "tenRap": "Rạp 7",
+              "ngayChieuGioChieu": "2019-01-04T18:10:00",
+              "giaVe": 75000,
+              "thoiLuong": 120
+            },
+            {
+              "maLichChieu": "25842",
+              "maRap": "647",
+              "tenRap": "Rạp 7",
+              "ngayChieuGioChieu": "2019-01-04T20:10:00",
+              "giaVe": 75000,
+              "thoiLuong": 120
+            },
+            {
+              "maLichChieu": "25843",
+              "maRap": "647",
+              "tenRap": "Rạp 7",
+              "ngayChieuGioChieu": "2019-01-05T10:10:00",
+              "giaVe": 75000,
+              "thoiLuong": 120
+            },
+            {
+              "maLichChieu": "25844",
+              "maRap": "647",
+              "tenRap": "Rạp 7",
+              "ngayChieuGioChieu": "2019-01-05T12:10:00",
+              "giaVe": 75000,
+              "thoiLuong": 120
+            },
+            {
+              "maLichChieu": "25845",
+              "maRap": "647",
+              "tenRap": "Rạp 7",
+              "ngayChieuGioChieu": "2019-01-05T14:10:00",
+              "giaVe": 75000,
+              "thoiLuong": 120
+            },
+            {
+              "maLichChieu": "25846",
+              "maRap": "647",
+              "tenRap": "Rạp 7",
+              "ngayChieuGioChieu": "2019-01-05T16:10:00",
+              "giaVe": 75000,
+              "thoiLuong": 120
+            },
+            {
+              "maLichChieu": "25847",
+              "maRap": "647",
+              "tenRap": "Rạp 7",
+              "ngayChieuGioChieu": "2019-01-05T18:10:00",
+              "giaVe": 75000,
+              "thoiLuong": 120
+            },
+            {
+              "maLichChieu": "25848",
+              "maRap": "647",
+              "tenRap": "Rạp 7",
+              "ngayChieuGioChieu": "2019-01-05T20:10:00",
+              "giaVe": 75000,
+              "thoiLuong": 120
+            },
+            {
+              "maLichChieu": "25849",
+              "maRap": "647",
+              "tenRap": "Rạp 7",
+              "ngayChieuGioChieu": "2019-01-06T10:10:00",
+              "giaVe": 75000,
+              "thoiLuong": 120
+            },
+            {
+              "maLichChieu": "25850",
+              "maRap": "647",
+              "tenRap": "Rạp 7",
+              "ngayChieuGioChieu": "2019-01-06T12:10:00",
+              "giaVe": 75000,
+              "thoiLuong": 120
+            },
+            {
+              "maLichChieu": "25851",
+              "maRap": "647",
+              "tenRap": "Rạp 7",
+              "ngayChieuGioChieu": "2019-01-06T14:10:00",
+              "giaVe": 75000,
+              "thoiLuong": 120
+            },
+            {
+              "maLichChieu": "25852",
+              "maRap": "647",
+              "tenRap": "Rạp 7",
+              "ngayChieuGioChieu": "2019-01-06T16:10:00",
+              "giaVe": 75000,
+              "thoiLuong": 120
+            },
+            {
+              "maLichChieu": "25853",
+              "maRap": "647",
+              "tenRap": "Rạp 7",
+              "ngayChieuGioChieu": "2019-01-06T18:10:00",
+              "giaVe": 75000,
+              "thoiLuong": 120
+            },
+            {
+              "maLichChieu": "25854",
+              "maRap": "647",
+              "tenRap": "Rạp 7",
+              "ngayChieuGioChieu": "2019-01-06T20:10:00",
+              "giaVe": 75000,
+              "thoiLuong": 120
+            },
+            {
+              "maLichChieu": "25855",
+              "maRap": "647",
+              "tenRap": "Rạp 7",
+              "ngayChieuGioChieu": "2019-01-07T10:10:00",
+              "giaVe": 75000,
+              "thoiLuong": 120
+            },
+            {
+              "maLichChieu": "25856",
+              "maRap": "647",
+              "tenRap": "Rạp 7",
+              "ngayChieuGioChieu": "2019-01-07T12:10:00",
+              "giaVe": 75000,
+              "thoiLuong": 120
+            },
+            {
+              "maLichChieu": "25857",
+              "maRap": "647",
+              "tenRap": "Rạp 7",
+              "ngayChieuGioChieu": "2019-01-07T14:10:00",
+              "giaVe": 75000,
+              "thoiLuong": 120
+            },
+            {
+              "maLichChieu": "25858",
+              "maRap": "647",
+              "tenRap": "Rạp 7",
+              "ngayChieuGioChieu": "2019-01-07T16:10:00",
+              "giaVe": 75000,
+              "thoiLuong": 120
+            },
+            {
+              "maLichChieu": "25859",
+              "maRap": "647",
+              "tenRap": "Rạp 7",
+              "ngayChieuGioChieu": "2019-01-07T18:10:00",
+              "giaVe": 75000,
+              "thoiLuong": 120
+            },
+            {
+              "maLichChieu": "25860",
+              "maRap": "647",
+              "tenRap": "Rạp 7",
+              "ngayChieuGioChieu": "2019-01-07T20:10:00",
+              "giaVe": 75000,
+              "thoiLuong": 120
+            },
+            {
+              "maLichChieu": "25861",
+              "maRap": "647",
+              "tenRap": "Rạp 7",
+              "ngayChieuGioChieu": "2019-01-08T10:10:00",
+              "giaVe": 75000,
+              "thoiLuong": 120
+            },
+            {
+              "maLichChieu": "25862",
+              "maRap": "647",
+              "tenRap": "Rạp 7",
+              "ngayChieuGioChieu": "2019-01-08T12:10:00",
+              "giaVe": 75000,
+              "thoiLuong": 120
+            },
+            {
+              "maLichChieu": "25863",
+              "maRap": "647",
+              "tenRap": "Rạp 7",
+              "ngayChieuGioChieu": "2019-01-08T14:10:00",
+              "giaVe": 75000,
+              "thoiLuong": 120
+            },
+            {
+              "maLichChieu": "25864",
+              "maRap": "647",
+              "tenRap": "Rạp 7",
+              "ngayChieuGioChieu": "2019-01-08T16:10:00",
+              "giaVe": 75000,
+              "thoiLuong": 120
+            },
+            {
+              "maLichChieu": "25865",
+              "maRap": "647",
+              "tenRap": "Rạp 7",
+              "ngayChieuGioChieu": "2019-01-08T18:10:00",
+              "giaVe": 75000,
+              "thoiLuong": 120
+            },
+            {
+              "maLichChieu": "25866",
+              "maRap": "647",
+              "tenRap": "Rạp 7",
+              "ngayChieuGioChieu": "2019-01-08T20:10:00",
+              "giaVe": 75000,
+              "thoiLuong": 120
+            },
+            {
+              "maLichChieu": "25867",
+              "maRap": "647",
+              "tenRap": "Rạp 7",
+              "ngayChieuGioChieu": "2019-01-09T10:10:00",
+              "giaVe": 75000,
+              "thoiLuong": 120
+            },
+            {
+              "maLichChieu": "25868",
+              "maRap": "647",
+              "tenRap": "Rạp 7",
+              "ngayChieuGioChieu": "2019-01-09T12:10:00",
+              "giaVe": 75000,
+              "thoiLuong": 120
+            },
+            {
+              "maLichChieu": "25869",
+              "maRap": "647",
+              "tenRap": "Rạp 7",
+              "ngayChieuGioChieu": "2019-01-09T14:10:00",
+              "giaVe": 75000,
+              "thoiLuong": 120
+            },
+            {
+              "maLichChieu": "25870",
+              "maRap": "647",
+              "tenRap": "Rạp 7",
+              "ngayChieuGioChieu": "2019-01-09T16:10:00",
+              "giaVe": 75000,
+              "thoiLuong": 120
+            },
+            {
+              "maLichChieu": "25871",
+              "maRap": "647",
+              "tenRap": "Rạp 7",
+              "ngayChieuGioChieu": "2019-01-09T18:10:00",
+              "giaVe": 75000,
+              "thoiLuong": 120
+            },
+            {
+              "maLichChieu": "25872",
+              "maRap": "647",
+              "tenRap": "Rạp 7",
+              "ngayChieuGioChieu": "2019-01-09T20:10:00",
+              "giaVe": 75000,
+              "thoiLuong": 120
+            }
+          ],
+          "maCumRap": "cgv-pearl-plaza",
+          "tenCumRap": "CGV - Pearl Plaza",
+          "hinhAnh": null
+        }
+      ],
+      "maHeThongRap": "CGV",
+      "tenHeThongRap": "cgv",
+      "logo": "http://movie0706.cybersoft.edu.vn/hinhanh/cgv.png"
+    },
+    {
+      "cumRapChieu": [
+        {
+          "lichChieuPhim": [
+            {
+              "maLichChieu": "43833",
+              "maRap": "738",
+              "tenRap": "Rạp 8",
+              "ngayChieuGioChieu": "2021-07-16T09:00:00",
+              "giaVe": 100000,
+              "thoiLuong": 120
+            }
+          ],
+          "maCumRap": "cns-quoc-thanh",
+          "tenCumRap": "CNS - Quốc Thanh",
+          "hinhAnh": null
+        }
+      ],
+      "maHeThongRap": "CineStar",
+      "tenHeThongRap": "CineStar",
+      "logo": "http://movie0706.cybersoft.edu.vn/hinhanh/cinestar.png"
+    },
+    {
+      "cumRapChieu": [
+        {
+          "lichChieuPhim": [
+            {
+              "maLichChieu": "43830",
+              "maRap": "821",
+              "tenRap": "Rạp 1",
+              "ngayChieuGioChieu": "2021-07-18T09:00:00",
+              "giaVe": 75000,
+              "thoiLuong": 120
+            },
+            {
+              "maLichChieu": "43831",
+              "maRap": "821",
+              "tenRap": "Rạp 1",
+              "ngayChieuGioChieu": "2021-07-16T09:00:00",
+              "giaVe": 75000,
+              "thoiLuong": 120
+            },
+            {
+              "maLichChieu": "43832",
+              "maRap": "823",
+              "tenRap": "Rạp 3",
+              "ngayChieuGioChieu": "2021-07-16T09:00:00",
+              "giaVe": 100000,
+              "thoiLuong": 120
+            }
+          ],
+          "maCumRap": "lotte-cantavil",
+          "tenCumRap": "Lotte - Cantavil",
+          "hinhAnh": null
+        }
+      ],
+      "maHeThongRap": "LotteCinima",
+      "tenHeThongRap": "Lotte Cinema",
+      "logo": "http://movie0706.cybersoft.edu.vn/hinhanh/lotte-cinema.png"
+    },
+    {
+      "cumRapChieu": [
+        {
+          "lichChieuPhim": [
+            {
+              "maLichChieu": "39637",
+              "maRap": "903",
+              "tenRap": "Rạp 3",
+              "ngayChieuGioChieu": "2019-01-01T10:10:00",
+              "giaVe": 75000,
+              "thoiLuong": 120
+            },
+            {
+              "maLichChieu": "39638",
+              "maRap": "903",
+              "tenRap": "Rạp 3",
+              "ngayChieuGioChieu": "2019-01-01T12:10:00",
+              "giaVe": 75000,
+              "thoiLuong": 120
+            },
+            {
+              "maLichChieu": "39639",
+              "maRap": "903",
+              "tenRap": "Rạp 3",
+              "ngayChieuGioChieu": "2019-01-01T14:10:00",
+              "giaVe": 75000,
+              "thoiLuong": 120
+            },
+            {
+              "maLichChieu": "39640",
+              "maRap": "903",
+              "tenRap": "Rạp 3",
+              "ngayChieuGioChieu": "2019-01-01T16:10:00",
+              "giaVe": 75000,
+              "thoiLuong": 120
+            },
+            {
+              "maLichChieu": "39641",
+              "maRap": "903",
+              "tenRap": "Rạp 3",
+              "ngayChieuGioChieu": "2019-01-01T18:10:00",
+              "giaVe": 75000,
+              "thoiLuong": 120
+            },
+            {
+              "maLichChieu": "39642",
+              "maRap": "903",
+              "tenRap": "Rạp 3",
+              "ngayChieuGioChieu": "2019-01-01T20:10:00",
+              "giaVe": 75000,
+              "thoiLuong": 120
+            },
+            {
+              "maLichChieu": "39643",
+              "maRap": "903",
+              "tenRap": "Rạp 3",
+              "ngayChieuGioChieu": "2019-01-02T10:10:00",
+              "giaVe": 75000,
+              "thoiLuong": 120
+            },
+            {
+              "maLichChieu": "39644",
+              "maRap": "903",
+              "tenRap": "Rạp 3",
+              "ngayChieuGioChieu": "2019-01-02T12:10:00",
+              "giaVe": 75000,
+              "thoiLuong": 120
+            },
+            {
+              "maLichChieu": "39645",
+              "maRap": "903",
+              "tenRap": "Rạp 3",
+              "ngayChieuGioChieu": "2019-01-02T14:10:00",
+              "giaVe": 75000,
+              "thoiLuong": 120
+            },
+            {
+              "maLichChieu": "39646",
+              "maRap": "903",
+              "tenRap": "Rạp 3",
+              "ngayChieuGioChieu": "2019-01-02T16:10:00",
+              "giaVe": 75000,
+              "thoiLuong": 120
+            },
+            {
+              "maLichChieu": "39647",
+              "maRap": "903",
+              "tenRap": "Rạp 3",
+              "ngayChieuGioChieu": "2019-01-02T18:10:00",
+              "giaVe": 75000,
+              "thoiLuong": 120
+            },
+            {
+              "maLichChieu": "39648",
+              "maRap": "903",
+              "tenRap": "Rạp 3",
+              "ngayChieuGioChieu": "2019-01-02T20:10:00",
+              "giaVe": 75000,
+              "thoiLuong": 120
+            },
+            {
+              "maLichChieu": "39649",
+              "maRap": "903",
+              "tenRap": "Rạp 3",
+              "ngayChieuGioChieu": "2019-01-03T10:10:00",
+              "giaVe": 75000,
+              "thoiLuong": 120
+            },
+            {
+              "maLichChieu": "39650",
+              "maRap": "903",
+              "tenRap": "Rạp 3",
+              "ngayChieuGioChieu": "2019-01-03T12:10:00",
+              "giaVe": 75000,
+              "thoiLuong": 120
+            },
+            {
+              "maLichChieu": "39651",
+              "maRap": "903",
+              "tenRap": "Rạp 3",
+              "ngayChieuGioChieu": "2019-01-03T14:10:00",
+              "giaVe": 75000,
+              "thoiLuong": 120
+            },
+            {
+              "maLichChieu": "39652",
+              "maRap": "903",
+              "tenRap": "Rạp 3",
+              "ngayChieuGioChieu": "2019-01-03T16:10:00",
+              "giaVe": 75000,
+              "thoiLuong": 120
+            },
+            {
+              "maLichChieu": "39653",
+              "maRap": "903",
+              "tenRap": "Rạp 3",
+              "ngayChieuGioChieu": "2019-01-03T18:10:00",
+              "giaVe": 75000,
+              "thoiLuong": 120
+            },
+            {
+              "maLichChieu": "39654",
+              "maRap": "903",
+              "tenRap": "Rạp 3",
+              "ngayChieuGioChieu": "2019-01-03T20:10:00",
+              "giaVe": 75000,
+              "thoiLuong": 120
+            },
+            {
+              "maLichChieu": "39655",
+              "maRap": "903",
+              "tenRap": "Rạp 3",
+              "ngayChieuGioChieu": "2019-01-04T10:10:00",
+              "giaVe": 75000,
+              "thoiLuong": 120
+            },
+            {
+              "maLichChieu": "39656",
+              "maRap": "903",
+              "tenRap": "Rạp 3",
+              "ngayChieuGioChieu": "2019-01-04T12:10:00",
+              "giaVe": 75000,
+              "thoiLuong": 120
+            },
+            {
+              "maLichChieu": "39657",
+              "maRap": "903",
+              "tenRap": "Rạp 3",
+              "ngayChieuGioChieu": "2019-01-04T14:10:00",
+              "giaVe": 75000,
+              "thoiLuong": 120
+            },
+            {
+              "maLichChieu": "39658",
+              "maRap": "903",
+              "tenRap": "Rạp 3",
+              "ngayChieuGioChieu": "2019-01-04T16:10:00",
+              "giaVe": 75000,
+              "thoiLuong": 120
+            },
+            {
+              "maLichChieu": "39659",
+              "maRap": "903",
+              "tenRap": "Rạp 3",
+              "ngayChieuGioChieu": "2019-01-04T18:10:00",
+              "giaVe": 75000,
+              "thoiLuong": 120
+            },
+            {
+              "maLichChieu": "39660",
+              "maRap": "903",
+              "tenRap": "Rạp 3",
+              "ngayChieuGioChieu": "2019-01-04T20:10:00",
+              "giaVe": 75000,
+              "thoiLuong": 120
+            },
+            {
+              "maLichChieu": "39661",
+              "maRap": "903",
+              "tenRap": "Rạp 3",
+              "ngayChieuGioChieu": "2019-01-05T10:10:00",
+              "giaVe": 75000,
+              "thoiLuong": 120
+            },
+            {
+              "maLichChieu": "39662",
+              "maRap": "903",
+              "tenRap": "Rạp 3",
+              "ngayChieuGioChieu": "2019-01-05T12:10:00",
+              "giaVe": 75000,
+              "thoiLuong": 120
+            },
+            {
+              "maLichChieu": "39663",
+              "maRap": "903",
+              "tenRap": "Rạp 3",
+              "ngayChieuGioChieu": "2019-01-05T14:10:00",
+              "giaVe": 75000,
+              "thoiLuong": 120
+            },
+            {
+              "maLichChieu": "39664",
+              "maRap": "903",
+              "tenRap": "Rạp 3",
+              "ngayChieuGioChieu": "2019-01-05T16:10:00",
+              "giaVe": 75000,
+              "thoiLuong": 120
+            },
+            {
+              "maLichChieu": "39665",
+              "maRap": "903",
+              "tenRap": "Rạp 3",
+              "ngayChieuGioChieu": "2019-01-05T18:10:00",
+              "giaVe": 75000,
+              "thoiLuong": 120
+            },
+            {
+              "maLichChieu": "39666",
+              "maRap": "903",
+              "tenRap": "Rạp 3",
+              "ngayChieuGioChieu": "2019-01-05T20:10:00",
+              "giaVe": 75000,
+              "thoiLuong": 120
+            },
+            {
+              "maLichChieu": "39667",
+              "maRap": "903",
+              "tenRap": "Rạp 3",
+              "ngayChieuGioChieu": "2019-01-06T10:10:00",
+              "giaVe": 75000,
+              "thoiLuong": 120
+            },
+            {
+              "maLichChieu": "39668",
+              "maRap": "903",
+              "tenRap": "Rạp 3",
+              "ngayChieuGioChieu": "2019-01-06T12:10:00",
+              "giaVe": 75000,
+              "thoiLuong": 120
+            },
+            {
+              "maLichChieu": "39669",
+              "maRap": "903",
+              "tenRap": "Rạp 3",
+              "ngayChieuGioChieu": "2019-01-06T14:10:00",
+              "giaVe": 75000,
+              "thoiLuong": 120
+            },
+            {
+              "maLichChieu": "39670",
+              "maRap": "903",
+              "tenRap": "Rạp 3",
+              "ngayChieuGioChieu": "2019-01-06T16:10:00",
+              "giaVe": 75000,
+              "thoiLuong": 120
+            },
+            {
+              "maLichChieu": "39671",
+              "maRap": "903",
+              "tenRap": "Rạp 3",
+              "ngayChieuGioChieu": "2019-01-06T18:10:00",
+              "giaVe": 75000,
+              "thoiLuong": 120
+            },
+            {
+              "maLichChieu": "39672",
+              "maRap": "903",
+              "tenRap": "Rạp 3",
+              "ngayChieuGioChieu": "2019-01-06T20:10:00",
+              "giaVe": 75000,
+              "thoiLuong": 120
+            },
+            {
+              "maLichChieu": "39673",
+              "maRap": "903",
+              "tenRap": "Rạp 3",
+              "ngayChieuGioChieu": "2019-01-07T10:10:00",
+              "giaVe": 75000,
+              "thoiLuong": 120
+            },
+            {
+              "maLichChieu": "39674",
+              "maRap": "903",
+              "tenRap": "Rạp 3",
+              "ngayChieuGioChieu": "2019-01-07T12:10:00",
+              "giaVe": 75000,
+              "thoiLuong": 120
+            },
+            {
+              "maLichChieu": "39675",
+              "maRap": "903",
+              "tenRap": "Rạp 3",
+              "ngayChieuGioChieu": "2019-01-07T14:10:00",
+              "giaVe": 75000,
+              "thoiLuong": 120
+            },
+            {
+              "maLichChieu": "39676",
+              "maRap": "903",
+              "tenRap": "Rạp 3",
+              "ngayChieuGioChieu": "2019-01-07T16:10:00",
+              "giaVe": 75000,
+              "thoiLuong": 120
+            },
+            {
+              "maLichChieu": "39677",
+              "maRap": "903",
+              "tenRap": "Rạp 3",
+              "ngayChieuGioChieu": "2019-01-07T18:10:00",
+              "giaVe": 75000,
+              "thoiLuong": 120
+            },
+            {
+              "maLichChieu": "39678",
+              "maRap": "903",
+              "tenRap": "Rạp 3",
+              "ngayChieuGioChieu": "2019-01-07T20:10:00",
+              "giaVe": 75000,
+              "thoiLuong": 120
+            },
+            {
+              "maLichChieu": "39679",
+              "maRap": "903",
+              "tenRap": "Rạp 3",
+              "ngayChieuGioChieu": "2019-01-08T10:10:00",
+              "giaVe": 75000,
+              "thoiLuong": 120
+            },
+            {
+              "maLichChieu": "39680",
+              "maRap": "903",
+              "tenRap": "Rạp 3",
+              "ngayChieuGioChieu": "2019-01-08T12:10:00",
+              "giaVe": 75000,
+              "thoiLuong": 120
+            },
+            {
+              "maLichChieu": "39681",
+              "maRap": "903",
+              "tenRap": "Rạp 3",
+              "ngayChieuGioChieu": "2019-01-08T14:10:00",
+              "giaVe": 75000,
+              "thoiLuong": 120
+            },
+            {
+              "maLichChieu": "39682",
+              "maRap": "903",
+              "tenRap": "Rạp 3",
+              "ngayChieuGioChieu": "2019-01-08T16:10:00",
+              "giaVe": 75000,
+              "thoiLuong": 120
+            },
+            {
+              "maLichChieu": "39683",
+              "maRap": "903",
+              "tenRap": "Rạp 3",
+              "ngayChieuGioChieu": "2019-01-08T18:10:00",
+              "giaVe": 75000,
+              "thoiLuong": 120
+            },
+            {
+              "maLichChieu": "39684",
+              "maRap": "903",
+              "tenRap": "Rạp 3",
+              "ngayChieuGioChieu": "2019-01-08T20:10:00",
+              "giaVe": 75000,
+              "thoiLuong": 120
+            },
+            {
+              "maLichChieu": "39685",
+              "maRap": "903",
+              "tenRap": "Rạp 3",
+              "ngayChieuGioChieu": "2019-01-09T10:10:00",
+              "giaVe": 75000,
+              "thoiLuong": 120
+            },
+            {
+              "maLichChieu": "39686",
+              "maRap": "903",
+              "tenRap": "Rạp 3",
+              "ngayChieuGioChieu": "2019-01-09T12:10:00",
+              "giaVe": 75000,
+              "thoiLuong": 120
+            },
+            {
+              "maLichChieu": "39687",
+              "maRap": "903",
+              "tenRap": "Rạp 3",
+              "ngayChieuGioChieu": "2019-01-09T14:10:00",
+              "giaVe": 75000,
+              "thoiLuong": 120
+            },
+            {
+              "maLichChieu": "39688",
+              "maRap": "903",
+              "tenRap": "Rạp 3",
+              "ngayChieuGioChieu": "2019-01-09T16:10:00",
+              "giaVe": 75000,
+              "thoiLuong": 120
+            },
+            {
+              "maLichChieu": "39689",
+              "maRap": "903",
+              "tenRap": "Rạp 3",
+              "ngayChieuGioChieu": "2019-01-09T18:10:00",
+              "giaVe": 75000,
+              "thoiLuong": 120
+            },
+            {
+              "maLichChieu": "39690",
+              "maRap": "903",
+              "tenRap": "Rạp 3",
+              "ngayChieuGioChieu": "2019-01-09T20:10:00",
+              "giaVe": 75000,
+              "thoiLuong": 120
+            }
+          ],
+          "maCumRap": "megags-cao-thang",
+          "tenCumRap": "MegaGS - Cao Thắng",
+          "hinhAnh": null
+        }
+      ],
+      "maHeThongRap": "MegaGS",
+      "tenHeThongRap": "MegaGS",
+      "logo": "http://movie0706.cybersoft.edu.vn/hinhanh/megags.png"
+    }
+  ],
+  "maPhim": 1494,
+  "tenPhim": "Gene",
+  "biDanh": "gene",
+  "trailer": "https://www.youtube.com/embed/cX-Oqdt7gmc",
+  "hinhAnh": "http://movie0706.cybersoft.edu.vn/hinhanh/gene_gp01.jpg",
+  "moTa": "Mortal Kombat: Đấu Trường Sinh Tử xoay quanh võ sĩ võ thuật tổng hợp Cole Young (Lewis Tan), người mang trên mình một vết chàm rồng đen bí ẩn - biểu tượng của Mortal Kombat",
+  "maNhom": "GP01",
+  "ngayKhoiChieu": "2021-07-19T00:00:00",
+  "danhGia": 10
+}
