@@ -1,0 +1,40 @@
+{
+    "maRap": 451,
+    "tenRap": "Rạp 1"
+}
+{
+    "maRap": 452,
+    "tenRap": "Rạp 2"
+}
+{
+    "maRap": 453,
+    "tenRap": "Rạp 3"
+}
+{
+    "maRap": 454,
+    "tenRap": "Rạp 4"
+}
+{
+    "maRap": 455,
+    "tenRap": "Rạp 5"
+}
+{
+    "maRap": 456,
+    "tenRap": "Rạp 6"
+}
+{
+    "maRap": 457,
+    "tenRap": "Rạp 7"
+}
+{
+    "maRap": 458,
+    "tenRap": "Rạp 8"
+}
+{
+    "maRap": 459,
+    "tenRap": "Rạp 9"
+}
+{
+    "maRap": 460,
+    "tenRap": "Rạp 10"
+}
