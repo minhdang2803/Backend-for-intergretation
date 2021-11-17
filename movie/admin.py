@@ -1,12 +1,9 @@
 from django.contrib import admin
-from movie.models import HeThongRapChieu, LayThongTinCumRap, LayThongTinHeThongRap, QuanLyPhim, Rap,LayBuoiChieuPhim,LayCumRapChieu,LayThongTinLichChieuPhim
+import movie.models
 
 # Register your models here.
-admin.site.register(QuanLyPhim)
-admin.site.register(LayThongTinHeThongRap)
-admin.site.register(Rap)
-admin.site.register(LayThongTinCumRap)
-admin.site.register(LayBuoiChieuPhim)
-admin.site.register(LayCumRapChieu)
-admin.site.register(HeThongRapChieu)
-admin.site.register(LayThongTinLichChieuPhim)
+admin.site.register(movie.models.Phim)
+admin.site.register(movie.models.HeThongRap)
+admin.site.register(movie.models.CumRap)
+admin.site.register(movie.models.lichChieuPhim)
+admin.site.register(movie.models.Rap)

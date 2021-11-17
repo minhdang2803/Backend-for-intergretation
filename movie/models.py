@@ -3,7 +3,7 @@ from django.db.models.deletion import CASCADE
 from django.db.models.signals import post_delete
 
 # Create your models here.
-class QuanLyPhim(models.Model):
+class Phim(models.Model):
     maPhim = models.IntegerField(primary_key=True)
     tenPhim = models.CharField(max_length=50)
     biDanh = models.CharField(max_length=50)
@@ -17,56 +17,41 @@ class QuanLyPhim(models.Model):
     def __str__(self):
         return self.tenPhim
 
-
-# LayThongTinHeThongRap
-class LayThongTinHeThongRap(models.Model):
+class HeThongRap(models.Model):
     maHeThongRap = models.CharField(max_length=50, primary_key=True)
     tenHeThongRap = models.CharField(max_length=50)
     biDanh = models.CharField(max_length=50)
     logo = models.FileField(upload_to='images')
+    
     def __str__(self):
         return self.tenHeThongRap
 
 
-# LayThongTinCumRap
-# CumRap -------- 1---------Has ---------- N -----------Rap
-
-class Rap(models.Model):
-    maRap = models.CharField(max_length=50, primary_key=True)
-    tenRap = models.CharField(max_length=50)
-    def __str__(self):
-        return self.maRap
-
-class LayThongTinCumRap(models.Model):
+class CumRap(models.Model):
+    heThongRap = models.ForeignKey(HeThongRap, on_delete=CASCADE)
     maCumRap = models.CharField(max_length=50, primary_key=True)
     tenCumRap = models.CharField(max_length=50)
-    diaChi = models.CharField(max_length=50)
-    danhSachRap = models.ManyToManyField(Rap)
+    diaChi = models.CharField(max_length=100)
+
     def __str__(self):
         return self.tenCumRap
 
 
+class Rap(models.Model):
+    cumRap = models.ForeignKey(CumRap, on_delete=CASCADE)
+    maRap = models.IntegerField(primary_key=True)
+    tenRap = models.CharField(max_length=10)
 
+    def __str__(self):
+        return self.cumRap.tenCumRap + " - " + self.tenRap
 
-
-# LayThongTinLichChieuPhim
-class LayBuoiChieuPhim(models.Model):
-    maLichChieu = models.CharField(max_length=50, primary_key=True)
-    maRap =  models.ForeignKey(Rap, on_delete=CASCADE)
+class lichChieuPhim(models.Model):
+    rap = models.ForeignKey(Rap, on_delete=CASCADE)
+    phim = models.ForeignKey(Phim, on_delete=CASCADE)
+    maLichChieu = models.IntegerField(primary_key=True)
     ngayChieuGioChieu = models.DateTimeField()
     giaVe = models.IntegerField()
     thoiLuong = models.IntegerField()
 
-class LayCumRapChieu(models.Model):
-    maCumRap = models.ForeignKey(LayThongTinCumRap, on_delete=CASCADE)
-    lichChieuPhim = models.ManyToManyField(LayBuoiChieuPhim)
-
-class HeThongRapChieu(models.Model):
-    maHeThongRap = models.ForeignKey(LayThongTinHeThongRap, on_delete=CASCADE)
-    cumRapChieu = models.ManyToManyField(LayCumRapChieu)
-
-class LayThongTinLichChieuPhim(models.Model):
-    maPhim = models.ForeignKey(QuanLyPhim, on_delete=CASCADE)
-    heThongRapChieu = models.ManyToManyField(HeThongRapChieu)
     def __str__(self):
-        return self.maPhim
+        return self.rap.__str__() + " - " + str(self.maLichChieu)

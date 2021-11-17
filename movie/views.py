@@ -7,8 +7,8 @@ from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import serializers, status, generics, filters
 
-from . models import LayThongTinHeThongRap, QuanLyPhim, Rap, LayThongTinCumRap
-from . serializers import QuanLyPhimSerializer, LayThongTinHeThongRapSerializer, LayThongTinCumRapSerializer, RapSerializer
+import movie.models
+import movie.serializers
 from PIL import Image
 
 def secureImage(request, imagePath):
@@ -19,97 +19,25 @@ def secureImage(request, imagePath):
 
 # Create your views here.
 class QuanLyPhimList(generics.ListAPIView):
-    queryset = QuanLyPhim.objects.all()
-    serializer_class = QuanLyPhimSerializer
+    queryset = movie.models.Phim.objects.all()
+    serializer_class = movie.serializers.PhimSerializer
     filterset_fields = ['maNhom', 'tenPhim']
 
-class QuanLyPhimDelete(generics.DestroyAPIView):
-    queryset = QuanLyPhim.objects.all()
-    serializer_class = QuanLyPhimSerializer
-
-class QuanLyPhimCreate(generics.CreateAPIView):
-    queryset = QuanLyPhim.objects.all()
-    serializer_class = QuanLyPhimSerializer
-
-#! Lay thong tin he thong rap
 class LayThongTinHeThongRapList(generics.ListAPIView):
-    queryset = LayThongTinHeThongRap.objects.all()
-    serializer_class = LayThongTinHeThongRapSerializer
-    filterset_fields = ['maHeThongRap', 'tenHeThongRap']
-    
-class LayThongTinHeThongRapDelete(generics.DestroyAPIView):
-    queryset = LayThongTinHeThongRap.objects.all()
-    serializer_class = LayThongTinHeThongRapSerializer
-
-class LayThongTinHeThongRapCreate(generics.CreateAPIView):
-    queryset = LayThongTinHeThongRap.objects.all()
-    serializer_class = LayThongTinHeThongRapSerializer
-
-# !Lay thong tin cum rap
-class RapList(generics.ListAPIView):
-    queryset = Rap.objects.all()
-    serializer_class = RapSerializer
-    filterset_fields = ['maRap', 'tenRap']
-
-class RapCreate(generics.CreateAPIView):
-    queryset = Rap.objects.all()
-    serializer_class = RapSerializer
-
-class RapDelete(generics.DestroyAPIView):
-    queryset = Rap.objects.all()
-    serializer_class = RapSerializer
+    queryset = movie.models.HeThongRap.objects.all()
+    serializer_class = movie.serializers.HeThongRapSerializer
 
 class LayThongTinCumRapList(generics.ListAPIView):
-    queryset = LayThongTinCumRap.objects.all()
-    serializer_class = LayThongTinCumRapSerializer
-    filterset_fields = ['maCumRap', 'tenCumRap']
+    queryset = movie.models.CumRap.objects.all()
+    serializer_class = movie.serializers.CumRapSerializer
 
-class LayThongTinCumRapCreate(generics.CreateAPIView):
-    queryset = LayThongTinCumRap.objects.all()
-    serializer_class = LayThongTinCumRapSerializer
-
-class LayThongTinCumRapDelete(generics.DestroyAPIView):
-    queryset = LayThongTinCumRap.objects.all()
-    serializer_class = LayThongTinCumRapSerializer
-
-#LayBuoiChieuPhim
-
-class LayBuoiChieuPhimList(generics.ListAPIView):
-    queryset = QuanLyPhim.objects.all()
-    serializer_class = QuanLyPhimSerializer
-    filterset_fields = ['maLichChieu','ngayChieuGioChieu']
-
-#LayCumRapChieu
-
-class LayCumRapchieuphimList(generics.ListAPIView):
-    queryset = LayThongTinCumRap.objects.all()
-    serializer_class = LayThongTinCumRapSerializer
-    filterset_fields = ['maCumRap','lichChieuPhim']
-
-#HeThongChieuPhim
-
-class HeThongChieuPhimList(generics.ListAPIView):
-    queryset = LayThongTinHeThongRap.objects.all()
-    serializer_class = LayThongTinHeThongRapSerializer
-    filterset_fields = ['maHeThongRap','cumRapChieu']
-class HeThongChieuPhimCreate(generics.CreateAPIView):
-    queryset = LayThongTinHeThongRap.objects.all()
-    serializer_class = LayThongTinHeThongRapSerializer
-
-class HeThongChieuPhimDelete(generics.DestroyAPIView):
-    queryset = LayThongTinHeThongRap.objects.all()
-    serializer_class = LayThongTinHeThongRapSerializer
-
-#LayThongTinLichChieuPhim
-
+#Lay Thong Tin Lich Chieu
 class LayThongTinLichChieuPhimList(generics.ListAPIView):
-    queryset = QuanLyPhim.objects.all()
-    serializer_class = QuanLyPhimSerializer
-    filterset_fields = ['maPhim','heThongRapChieu']
-class LayThongTinLichChieuPhimCreate(generics.CreateAPIView):
-    queryset = QuanLyPhim.objects.all()
-    serializer_class = QuanLyPhimSerializer
+    serializer_class = movie.serializers.LTTLCP
 
-class LayThongTinLichChieuPhimDelete(generics.DestroyAPIView):
-    queryset = QuanLyPhim.objects.all()
-    serializer_class = QuanLyPhimSerializer
+    def get_queryset(self):
+        queryset = movie.models.lichChieuPhim.objects.all()
+        maPhim = self.request.query_params.get('maPhim')
+        if maPhim is not None:
+            queryset = queryset.filter(phim__maPhim=maPhim)
+        return queryset

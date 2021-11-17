@@ -1,43 +1,63 @@
 from django.db.models import fields
 from rest_framework import serializers
-from movie.models import LayBuoiChieuPhim, LayThongTinHeThongRap, QuanLyPhim, Rap, LayThongTinCumRap, LayCumRapChieu, HeThongRapChieu, LayThongTinLichChieuPhim
+import movie.models
 
+class PhimSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = movie.models.Phim
+        fields = '__all__'
 
-class QuanLyPhimSerializer(serializers.ModelSerializer):
+class HeThongRapSerializer(serializers.ModelSerializer):
     class Meta:
-        model = QuanLyPhim
-        fields = ('__all__')
+        model = movie.models.HeThongRap
+        fields = '__all__'
 
-class LayThongTinHeThongRapSerializer(serializers.ModelSerializer):
+class CumRapSerializer(serializers.ModelSerializer):
     class Meta:
-        model = LayThongTinHeThongRap
-        fields = ('__all__')
+        model = movie.models.CumRap
+        fields = '__all__'
 
-class RapSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Rap
-        fields = ('__all__')
+class lichChieuPhimSerializerForLTTLCP(serializers.ModelSerializer):
+    maRap = serializers.ReadOnlyField(source='rap.maRap')
+    tenRap = serializers.ReadOnlyField(source='rap.tenRap')
 
-class LayThongTinCumRapSerializer(serializers.ModelSerializer):
     class Meta:
-        model = LayThongTinCumRap
-        fields = ('__all__')
+        model = movie.models.lichChieuPhim
+        fields = ['maLichChieu', 'maRap', 'tenRap', 'ngayChieuGioChieu', 'giaVe', 'thoiLuong']
 
-class LayBuoiChieuPhimSerializer(serializers.ModelSerializer):
+class cumRapChieuForLTTLCP(serializers.ModelSerializer):
+    lichChieuPhim = lichChieuPhimSerializerForLTTLCP(source = '*', read_only = True)
+    maCumRap = serializers.ReadOnlyField(source='rap.cumRap.maCumRap')
+    tenCumRap = serializers.ReadOnlyField(source='rap.cumRap.tenCumRap')
+    hinhAnh = serializers.IntegerField(default=None)
+    
     class Meta:
-        model = LayBuoiChieuPhim
-        fields = ('__all__')
+        model = movie.models.lichChieuPhim
+        fields = ['lichChieuPhim', 'maCumRap', 'tenCumRap', 'hinhAnh']
 
-class LayCumRapChieuSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = LayCumRapChieu
-        fields = ('__all__')
-class HeThongRapChieuSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = HeThongRapChieu
-        fields = ('__all__')
+class heThongRapChieuForLTTLCP(serializers.ModelSerializer):
+    cumRapChieu = cumRapChieuForLTTLCP(source = '*', read_only = True)
+    maHeThongRap = serializers.ReadOnlyField(source='rap.cumRap.heThongRap.maHeThongRap')
+    tenHeThongRap = serializers.ReadOnlyField(source='rap.cumRap.heThongRap.tenHeThongRap')
+    logo = serializers.FileField(source='rap.cumRap.heThongRap.logo')
 
-class LayThongTinLichChieuPhimSerializer(serializers.ModelSerializer):
     class Meta:
-        model = LayThongTinLichChieuPhim
-        fields = ('__all__')
+        model = movie.models.lichChieuPhim
+        fields = ['cumRapChieu', 'maHeThongRap', 'tenHeThongRap', 'logo']
+
+class LTTLCP(serializers.ModelSerializer):
+    heThongRapChieu = heThongRapChieuForLTTLCP(source = '*', read_only = True)
+    maPhim = serializers.ReadOnlyField(source='phim.maPhim')
+    tenPhim = serializers.ReadOnlyField(source='phim.tenPhim')
+    biDanh = serializers.ReadOnlyField(source='phim.biDanh')
+    trailer = serializers.ReadOnlyField(source='phim.trailer')
+    hinhAnh = serializers.FileField(source='phim.hinhAnh')
+    moTa = serializers.ReadOnlyField(source='phim.moTa')
+    maNhom = serializers.ReadOnlyField(source='phim.maNhom')
+    ngayKhoiChieu = serializers.ReadOnlyField(source='phim.ngayKhoiChieu')
+    danhGia = serializers.ReadOnlyField(source='phim.danhGia')
+
+    class Meta:
+        model = movie.models.lichChieuPhim
+        fields = ['heThongRapChieu', 'maPhim', 'tenPhim', 'biDanh', 'trailer', 'hinhAnh', 'moTa', 'maNhom', 'ngayKhoiChieu', 'danhGia']
+
