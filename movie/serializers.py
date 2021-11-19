@@ -62,7 +62,7 @@ class LTTLCP(serializers.ModelSerializer):
         fields = ['heThongRapChieu', 'maPhim', 'tenPhim', 'biDanh', 'trailer', 'hinhAnh', 'moTa', 'maNhom', 'ngayKhoiChieu', 'danhGia']
 
 
-class LichChieuPhimSerializerForLTTLCHTR(serializers.ModelSerializer):
+class ListLichChieuTheoPhimSerializersForLTTLCHTR(serializers.ModelSerializer):
     maRap = serializers.ReadOnlyField(source='rap.maRap')
     tenRap = serializers.ReadOnlyField(source='rap.tenRap')
 
@@ -70,40 +70,33 @@ class LichChieuPhimSerializerForLTTLCHTR(serializers.ModelSerializer):
         model = movie.models.lichChieuPhim
         fields = ['maLichChieu', 'maRap', 'tenRap', 'ngayChieuGioChieu', 'giaVe']
 
-class ListLichChieuTheoPhimSerializersForLTTLCHTR(serializers.ModelSerializer):
-    lichChieuPhim = LichChieuPhimSerializerForLTTLCHTR(source = '*', read_only = True)
+class danhSachPhimSerializersforLTTLCHTR(serializers.ModelSerializer):
+    lstLichChieuTheoPhim = ListLichChieuTheoPhimSerializersForLTTLCHTR(source = '*', read_only = True)
     maPhim = serializers.ReadOnlyField(source='phim.maPhim')
     tenPhim = serializers.ReadOnlyField(source='phim.tenPhim')
     hinhAnh = serializers.FileField(source='phim.hinhAnh')
 
     class Meta:
         model = movie.models.lichChieuPhim
-        fields = ['lichChieuPhim', 'maPhim', 'tenPhim', 'hinhAnh']
+        fields = ['lstLichChieuTheoPhim', 'maPhim', 'tenPhim', 'hinhAnh']
 
-class danhSachPhimSerializersforLTTLCHTR(serializers.ModelSerializer):
-    listLichChieuTheoPhim = ListLichChieuTheoPhimSerializersForLTTLCHTR(source = '*', read_only = True)
+class listCumRapSerializersForLTTLCHTR(serializers.ModelSerializer):
+    danhSachPhim = danhSachPhimSerializersforLTTLCHTR(source = '*', read_only = True)
     maCumRap = serializers.ReadOnlyField(source='rap.cumRap.maCumRap')
     tenCumRap = serializers.ReadOnlyField(source='rap.cumRap.tenCumRap')
     diaChi = serializers.ReadOnlyField(source='rap.cumRap.diaChi')
 
     class Meta:
         model = movie.models.lichChieuPhim
-        fields = ['listLichChieuTheoPhim', 'maCumRap', 'tenCumRap', 'diaChi']
+        fields = ['danhSachPhim', 'maCumRap', 'tenCumRap', 'diaChi']
 
 
-class listCumRapSerializersForLTTLCHTR(serializers.ModelSerializer):
-    danhSachPhim = danhSachPhimSerializersforLTTLCHTR(source = '*', read_only = True)
+class LTTLCHTR(serializers.ModelSerializer):
+    lstCumRap = listCumRapSerializersForLTTLCHTR(source = '*', read_only = True)
     maHeThongRap = serializers.ReadOnlyField(source='rap.cumRap.heThongRap.maHeThongRap')
     tenHeThongRap = serializers.ReadOnlyField(source='rap.cumRap.heThongRap.tenHeThongRap')
     logo = serializers.FileField(source='rap.cumRap.heThongRap.logo')
     maNhom = serializers.ReadOnlyField(source='phim.maNhom')
     class Meta:
         model = movie.models.lichChieuPhim
-        fields = ['danhSachPhim', 'maHeThongRap', 'tenHeThongRap','logo', 'maNhom']
-
-class LTTLCHTR(serializers.ModelSerializer):
-    listCumRap = listCumRapSerializersForLTTLCHTR(source = '*', read_only = True)
-
-    class Meta:
-        model = movie.models.lichChieuPhim
-        fields = ['listCumRap']
+        fields = ['lstCumRap', 'maHeThongRap', 'tenHeThongRap','logo', 'maNhom']
