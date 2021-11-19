@@ -12,10 +12,17 @@ class HeThongRapSerializer(serializers.ModelSerializer):
         model = movie.models.HeThongRap
         fields = '__all__'
 
+class RapSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = movie.models.Rap
+        fields = ['maRap', 'tenRap']
+
 class CumRapSerializer(serializers.ModelSerializer):
+    danhSachRap = RapSerializer(source = 'rap', read_only = True, many = True)
+
     class Meta:
         model = movie.models.CumRap
-        fields = '__all__'
+        fields = ['maCumRap', 'tenCumRap', 'diaChi', 'danhSachRap']
 
 class lichChieuPhimSerializerForLTTLCP(serializers.ModelSerializer):
     maRap = serializers.ReadOnlyField(source='rap.maRap')

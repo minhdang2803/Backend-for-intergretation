@@ -28,7 +28,7 @@ class HeThongRap(models.Model):
 
 
 class CumRap(models.Model):
-    heThongRap = models.ForeignKey(HeThongRap, on_delete=CASCADE)
+    heThongRap = models.ForeignKey(HeThongRap, related_name='cumrap', on_delete=CASCADE)
     maCumRap = models.CharField(max_length=50, primary_key=True)
     tenCumRap = models.CharField(max_length=50)
     diaChi = models.CharField(max_length=100)
@@ -36,9 +36,8 @@ class CumRap(models.Model):
     def __str__(self):
         return self.tenCumRap
 
-
 class Rap(models.Model):
-    cumRap = models.ForeignKey(CumRap, on_delete=CASCADE)
+    cumRap = models.ForeignKey(CumRap, related_name='rap', on_delete=CASCADE)
     maRap = models.IntegerField(primary_key=True)
     tenRap = models.CharField(max_length=10)
 

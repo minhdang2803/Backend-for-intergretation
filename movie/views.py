@@ -28,8 +28,14 @@ class LayThongTinHeThongRapList(generics.ListAPIView):
     serializer_class = movie.serializers.HeThongRapSerializer
 
 class LayThongTinCumRapList(generics.ListAPIView):
-    queryset = movie.models.CumRap.objects.all()
     serializer_class = movie.serializers.CumRapSerializer
+
+    def get_queryset(self):
+        queryset = movie.models.CumRap.objects.all()
+        maHeThongRap = self.request.query_params.get('maHeThongRap')
+        if maHeThongRap is not None:
+            queryset = queryset.filter(heThongRap__maHeThongRap=maHeThongRap)
+        return queryset
 
 #Lay Thong Tin Lich Chieu
 class LayThongTinLichChieuPhimList(generics.ListAPIView):
