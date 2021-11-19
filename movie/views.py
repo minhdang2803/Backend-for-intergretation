@@ -41,3 +41,13 @@ class LayThongTinLichChieuPhimList(generics.ListAPIView):
         if maPhim is not None:
             queryset = queryset.filter(phim__maPhim=maPhim)
         return queryset
+
+class LayThongTinLichChieuHeThongRapList(generics.ListAPIView):
+    serializer_class = movie.serializers.LTTLCHTR
+
+    def get_queryset(self):
+        queryset = movie.models.lichChieuPhim.objects.all()
+        maNhom = self.request.query_params.get('maNhom')
+        if maNhom is not None:
+            queryset = queryset.filter(phim__maNhom=maNhom)
+        return queryset

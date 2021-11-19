@@ -55,3 +55,4 @@ class lichChieuPhim(models.Model):
 
     def __str__(self):
         return self.rap.__str__() + " - " + str(self.maLichChieu)
+
