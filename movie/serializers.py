@@ -71,12 +71,6 @@ class heThongRapChieuForLTTLCP(serializers.ModelSerializer):
         model = movie.models.HeThongRap
         fields = ['cumRapChieu', 'maHeThongRap', 'tenHeThongRap', 'logo']
 
-class maPhimFilterForLTTLCP(serializers.ListSerializer):
-    def to_representation(self, data):
-        maPhim = self.context['request']
-        data = data.filter(phim__maPhim = maPhim)
-        return super(maPhimFilterForLTTLCP, self).to_representation(data)
-
 class ListLichChieuTheoPhimSerializersForLTTLCHTR(serializers.ModelSerializer):
     maRap = serializers.ReadOnlyField(source='rap.maRap')
     tenRap = serializers.ReadOnlyField(source='rap.tenRap')
