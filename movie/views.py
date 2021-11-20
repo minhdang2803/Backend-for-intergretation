@@ -1,3 +1,4 @@
+import collections
 from django.db.models import query
 from django.shortcuts import render
 from django.http import HttpResponse
@@ -39,21 +40,36 @@ class LayThongTinCumRapList(generics.ListAPIView):
 
 #Lay Thong Tin Lich Chieu
 class LayThongTinLichChieuPhimList(generics.ListAPIView):
-    serializer_class = movie.serializers.LTTLCP
+    queryset = movie.models.HeThongRap.objects.all()
+    serializer_class = movie.serializers.heThongRapChieuForLTTLCP
+    serializer_class_phim = movie.serializers.PhimSerializer
 
-    def get_queryset(self):
-        queryset = movie.models.lichChieuPhim.objects.all()
+    def get_queryset_phim(self):
+        queryset = movie.models.Phim.objects.all()
         maPhim = self.request.query_params.get('maPhim')
         if maPhim is not None:
-            queryset = queryset.filter(phim__maPhim=maPhim)
+            queryset = queryset.filter(maPhim=maPhim)
         return queryset
+
+    def list(self, request, *args, **kwargs):
+        heThongRap = self.serializer_class(self.get_queryset(), many = True, context={'request': request})
+        phim = self.serializer_class_phim(self.get_queryset_phim(), many = True, context={'request': request})
+        result = {'heThongRapChieu': heThongRap.data}
+        for i in range(9):
+            result.update(phim.data.pop())
+        return Response(result)
 
 class LayThongTinLichChieuHeThongRapList(generics.ListAPIView):
     serializer_class = movie.serializers.LTTLCHTR
+    queryset = movie.models.HeThongRap.objects.all()
 
+class LayDanhSachPhongVe(generics.ListAPIView):
+    queryset = movie.models.lichChieuPhim.objects.all()
+    serializer_class = movie.serializers.LDSPV
+    
     def get_queryset(self):
         queryset = movie.models.lichChieuPhim.objects.all()
-        maNhom = self.request.query_params.get('maNhom')
-        if maNhom is not None:
-            queryset = queryset.filter(phim__maNhom=maNhom)
+        maLichChieu = self.request.query_params.get('maLichChieu') or self.request.query_params.get('MaLichChieu')
+        if maLichChieu is not None:
+            queryset = queryset.filter(maLichChieu=maLichChieu)
         return queryset
