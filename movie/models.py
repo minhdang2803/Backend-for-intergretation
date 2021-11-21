@@ -73,7 +73,7 @@ class Ghe(models.Model):
 def make_ghe(sender, instance, created, **kwargs):
     if created:
         for i in range(160):
-            if (35 <= i+1 <= 46 or 51 <= i+1 <= 62 or 67 <= i+1 <= 78 or 83 <= i+i <= 94 or 99 <= i <= 110 or 115 <= i+1 <= 126):
+            if (35 <= i+1 <= 46 or 51 <= i+1 <= 62 or 67 <= i+1 <= 78 or 83 <= i+1 <= 94 or 99 <= i+1 <= 110 or 115 <= i+1 <= 126):
                 Ghe.objects.create(
                     lichChieu = instance,
                     tenGhe = str(i+1),
