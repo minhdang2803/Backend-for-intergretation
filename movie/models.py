@@ -102,5 +102,8 @@ class NguoiDung(models.Model):
     soDt = models.CharField(max_length=15)
     hoTen = models.CharField(max_length=50)
 
+    class Meta:
+        unique_together = ('ID', 'taiKhoan')
+
     def __str__(self):
         return self.hoTen
