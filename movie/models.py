@@ -59,9 +59,9 @@ class lichChieuPhim(models.Model):
 class Ghe(models.Model):
     lichChieu = models.ForeignKey(lichChieuPhim, related_name='ghe', on_delete=CASCADE)
     maGhe = models.AutoField(primary_key=True)
-    tenGhe = models.CharField(max_length=2)
+    tenGhe = models.CharField(max_length=4)
     loaiGhe = models.CharField(max_length=10)
-    stt = models.CharField(max_length=2)
+    stt = models.CharField(max_length=4)
     giaVe = models.IntegerField()
     daDat = models.BooleanField()
     taiKhoanNguoiDat = models.CharField(max_length=20, null=True)
@@ -93,3 +93,14 @@ def make_ghe(sender, instance, created, **kwargs):
                     daDat = False,
                     taiKhoanNguoiDat = None
                 )
+
+class NguoiDung(models.Model):
+    ID = models.AutoField(primary_key=True)
+    taiKhoan = models.CharField(max_length=20)
+    matKhau = models.CharField(max_length=32)
+    email = models.EmailField()
+    soDt = models.CharField(max_length=15)
+    hoTen = models.CharField(max_length=50)
+
+    def __str__(self):
+        return self.hoTen

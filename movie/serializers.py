@@ -2,6 +2,7 @@ from typing import List
 from django.db.models import fields
 from rest_framework import serializers
 import movie.models
+from drf_writable_nested.serializers import WritableNestedModelSerializer
 
 class PhimSerializer(serializers.ModelSerializer):
     class Meta:
@@ -121,7 +122,7 @@ class LTTLCHTR(serializers.ModelSerializer):
         model = movie.models.HeThongRap
         fields = ['lstCumRap', 'maHeThongRap', 'tenHeThongRap', 'logo', 'maNhom']
 
-class thongTinPhimSerializerForLDSPV(serializers.ModelSerializer):
+class thongTinPhimSerializerForLDSPV(WritableNestedModelSerializer):
     tenCumRap = serializers.ReadOnlyField(source = 'rap.cumRap.tenCumRap')
     tenRap = serializers.ReadOnlyField(source = 'rap.tenRap')
     diaChi = serializers.ReadOnlyField(source = 'rap.cumRap.diaChi')
@@ -134,15 +135,31 @@ class thongTinPhimSerializerForLDSPV(serializers.ModelSerializer):
         model = movie.models.lichChieuPhim
         fields = ['maLichChieu', 'tenCumRap', 'tenRap', 'diaChi', 'tenPhim', 'hinhAnh', 'ngayChieu', 'gioChieu']
 
-class danhSachGheSerializerForLDSPV(serializers.ModelSerializer):
+class danhSachGheSerializerForLDSPV(WritableNestedModelSerializer):
     class Meta:
         model = movie.models.Ghe
         fields = ['maGhe', 'tenGhe', 'loaiGhe', 'stt', 'giaVe', 'daDat', 'taiKhoanNguoiDat']
 
-class LDSPV(serializers.ModelSerializer):
-    thongTinPhim = thongTinPhimSerializerForLDSPV(source = '*', read_only = True)
-    danhSachGhe = danhSachGheSerializerForLDSPV(source = 'ghe', read_only = True, many = True)
+class LDSPV(WritableNestedModelSerializer):
+    thongTinPhim = thongTinPhimSerializerForLDSPV(source = '*')
+    danhSachGhe = danhSachGheSerializerForLDSPV(source = 'ghe', many = True)
 
     class Meta:
         model = movie.models.lichChieuPhim
         fields = ['thongTinPhim', 'danhSachGhe']
+
+class DatGhe(WritableNestedModelSerializer):
+    danhSachGhe = danhSachGheSerializerForLDSPV(source = 'ghe', many = True)
+    class Meta:
+        model = movie.models.lichChieuPhim
+        fields = ['maLichChieu', 'danhSachGhe']
+
+class UserSerializerForDangKy(serializers.ModelSerializer):
+    class Meta:
+        model = movie.models.NguoiDung
+        fields = '__all__'
+
+class UserSerializerForDangNhap(serializers.ModelSerializer):
+    class Meta:
+        model = movie.models.NguoiDung
+        fields = ['ID', 'email', 'soDt']
