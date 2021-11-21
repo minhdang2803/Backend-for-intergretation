@@ -84,3 +84,27 @@ class LayDanhSachPhongVe(generics.ListAPIView):
 
         serializer = self.get_serializer(queryset, many=True)
         return Response(serializer.data[0])
+
+class DangNhap(generics.ListAPIView):
+    queryset = movie.models.NguoiDung.objects.all()
+    serializer_class = movie.serializers.UserSerializerForDangKy
+    filterset_fields = ['taiKhoan', 'matKhau']
+
+    def list(self, request, *args, **kwargs):
+        queryset = self.filter_queryset(self.get_queryset())
+
+        page = self.paginate_queryset(queryset)
+        if page is not None:
+            serializer = self.get_serializer(page, many=True)
+            return self.get_paginated_response(serializer.data)
+
+        serializer = self.get_serializer(queryset, many=True)
+        return Response(serializer.data[0])
+
+class DangKy(generics.CreateAPIView):
+    queryset = movie.models.NguoiDung.objects.all()
+    serializer_class = movie.serializers.UserSerializerForDangKy
+
+class DatGhe(generics.UpdateAPIView):
+    queryset = movie.models.lichChieuPhim.objects.all()
+    serializer_class = movie.serializers.DatGhe
