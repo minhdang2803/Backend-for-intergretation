@@ -59,7 +59,7 @@ class lichChieuPhim(models.Model):
     thoiLuong = models.IntegerField()
 
     def __str__(self):
-        return self.rap.__str__() + " - " + str(self.maLichChieu)
+        return self.phim.__str__() + " - " + self.rap.__str__() + " - " + str(self.maLichChieu)
 
 class Ghe(models.Model):
     lichChieu = models.ForeignKey(lichChieuPhim, related_name='ghe', on_delete=CASCADE)

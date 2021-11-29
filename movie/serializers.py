@@ -78,13 +78,7 @@ class heThongRapChieuForLTTLCP(serializers.ModelSerializer):
         newdict = OrderedDict()
         for (key, value) in data.items():
             if (key == 'cumRapChieu'):
-                newlist = OrderedDict()
-                for d in value:
-                    if (d is not None): 
-                        newlist.update(d)
-                if (newlist is List): value = newlist
-                elif (newlist == {}): value = []
-                else: value = [newlist]
+                value[:] = [tup for tup in value if tup is not None]
             newdict.update({key: value})
         return newdict
 
