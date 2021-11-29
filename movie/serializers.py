@@ -1,10 +1,11 @@
-from typing import List
+from typing import List, OrderedDict
 from django.db.models import fields
 from rest_framework import serializers
 import movie.models
 from drf_writable_nested.serializers import WritableNestedModelSerializer
 
 class PhimSerializer(serializers.ModelSerializer):
+    ngayKhoiChieuFormat = serializers.DateTimeField(source = 'ngayKhoiChieu', format="%d/%m/%Y")
     class Meta:
         model = movie.models.Phim
         fields = '__all__'
@@ -63,7 +64,7 @@ class cumRapChieuForLTTLCP(serializers.ModelSerializer):
         for d in data['lichChieuPhim']:
             newarr += d
         data['lichChieuPhim'] = newarr
-        return data
+        if (data['lichChieuPhim'] != []): return data
 
 class heThongRapChieuForLTTLCP(serializers.ModelSerializer):
     cumRapChieu = cumRapChieuForLTTLCP(source = 'cumrap', read_only = True, many = True)
@@ -71,6 +72,21 @@ class heThongRapChieuForLTTLCP(serializers.ModelSerializer):
     class Meta:
         model = movie.models.HeThongRap
         fields = ['cumRapChieu', 'maHeThongRap', 'tenHeThongRap', 'logo']
+
+    def to_representation(self, instance):
+        data = super().to_representation(instance)
+        newdict = OrderedDict()
+        for (key, value) in data.items():
+            if (key == 'cumRapChieu'):
+                newlist = OrderedDict()
+                for d in value:
+                    if (d is not None): 
+                        newlist.update(d)
+                if (newlist is List): value = newlist
+                elif (newlist == {}): value = []
+                else: value = [newlist]
+            newdict.update({key: value})
+        return newdict
 
 class ListLichChieuTheoPhimSerializersForLTTLCHTR(serializers.ModelSerializer):
     maRap = serializers.ReadOnlyField(source='rap.maRap')

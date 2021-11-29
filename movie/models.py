@@ -1,7 +1,7 @@
 from django.db import models
 from django.db.models.deletion import CASCADE
 from django.dispatch import receiver
-from django.db.models.signals import post_delete, post_save
+from django.db.models.signals import post_save
 
 # Create your models here.
 class Phim(models.Model):
@@ -14,6 +14,11 @@ class Phim(models.Model):
     maNhom = models.TextField()
     ngayKhoiChieu = models.DateTimeField()
     danhGia = models.IntegerField()
+    thoiLuong = models.IntegerField(default = 0)
+    daoDien = models.TextField(default = 'Add in =)))')
+    dienVien = models.TextField(default = 'Add in =)))')
+    theLoai = models.TextField(default = 'Add in =)))')
+    format = models.TextField(default = 'Add in =)))')
 
     def __str__(self):
         return self.tenPhim
