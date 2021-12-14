@@ -28,7 +28,6 @@ urlpatterns = [
     path('api/QuanLyRap/LayThongTinHeThongRap',views.LayThongTinHeThongRapList.as_view()), #Xem He Thong Rap
     path('api/QuanLyRap/LayThongTinCumRapTheoHeThong',views.LayThongTinCumRapList.as_view()),#Xem Cụm Rạp
     path('api/QuanLyRap/LayThongTinLichChieuPhim',views.LayThongTinLichChieuPhimList.as_view()), #Xem lịch chiếu
-    path('api/QuanLyRap/LayThongTinLichChieuHeThongRap',views.LayThongTinLichChieuHeThongRapList.as_view()), #Xem phim
     path('api/QuanLyDatVe/LayDanhSachPhongVe', views.LayDanhSachPhongVe.as_view()),
     path('api/QuanLyNguoiDung/DangNhap', views.DangNhap.as_view()),
     path('api/QuanLyNguoiDung/DangKy', views.DangKy.as_view()),

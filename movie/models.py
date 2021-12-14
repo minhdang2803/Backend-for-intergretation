@@ -15,10 +15,10 @@ class Phim(models.Model):
     ngayKhoiChieu = models.DateTimeField()
     danhGia = models.IntegerField()
     thoiLuong = models.IntegerField(default = 0)
-    daoDien = models.TextField(default = 'Add in =)))')
-    dienVien = models.TextField(default = 'Add in =)))')
-    theLoai = models.TextField(default = 'Add in =)))')
-    format = models.TextField(default = 'Add in =)))')
+    daoDien = models.TextField(default = 'Add in')
+    dienVien = models.TextField(default = 'Add in')
+    theLoai = models.TextField(default = 'Add in')
+    format = models.TextField(default = 'Add in')
 
     def __str__(self):
         return self.tenPhim
@@ -33,7 +33,6 @@ class HeThongRap(models.Model):
         return self.tenHeThongRap
 
 class CumRap(models.Model):
-    phim = models.ManyToManyField(Phim, related_name='cumRap')
     heThongRap = models.ForeignKey(HeThongRap, related_name='cumrap', on_delete=CASCADE)
     maCumRap = models.CharField(max_length=50, primary_key=True)
     tenCumRap = models.CharField(max_length=50)

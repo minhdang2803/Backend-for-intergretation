@@ -82,56 +82,6 @@ class heThongRapChieuForLTTLCP(serializers.ModelSerializer):
             newdict.update({key: value})
         return newdict
 
-class ListLichChieuTheoPhimSerializersForLTTLCHTR(serializers.ModelSerializer):
-    maRap = serializers.ReadOnlyField(source='rap.maRap')
-    tenRap = serializers.ReadOnlyField(source='rap.tenRap')
-    maPhim = serializers.ReadOnlyField(source = 'phim.maPhim')
-    tenPhim = serializers.ReadOnlyField(source = 'phim.tenPhim')
-    hinhAnh = serializers.FileField(source = 'phim.hinhAnh')
-
-    class Meta:
-        model = movie.models.lichChieuPhim
-        fields = ['maLichChieu', 'maRap', 'tenRap', 'ngayChieuGioChieu', 'giaVe', 'maPhim', 'tenPhim', 'hinhAnh']
-
-class danhSachPhimSerializersforLTTLCHTR(serializers.ModelSerializer):
-    lstLichChieuTheoPhim = ListLichChieuTheoPhimSerializersForLTTLCHTR(source = 'lichChieu', read_only = True, many = True)
-    # maPhim = serializers.ReadOnlyField(source='phim.maPhim')
-    # tenPhim = serializers.ReadOnlyField(source='phim.tenPhim')
-    # hinhAnh = serializers.FileField(source='phim.hinhAnh')
-
-    class Meta:
-        model = movie.models.Rap
-        fields = ['lstLichChieuTheoPhim']
-
-    def to_representation(self, instance):
-        return super().to_representation(instance)['lstLichChieuTheoPhim']
-
-class listCumRapSerializersForLTTLCHTR(serializers.ModelSerializer):
-    danhSachPhim = danhSachPhimSerializersforLTTLCHTR(source = 'rap', read_only = True, many = True)
-
-    class Meta:
-        model = movie.models.CumRap
-        fields = ['danhSachPhim', 'maCumRap', 'tenCumRap', 'diaChi']
-
-    def to_representation(self, instance):
-        data = super().to_representation(instance)
-        newarr = []
-        for d in data['danhSachPhim']:
-            newarr += d
-        data['danhSachPhim'] = newarr
-        return data
-
-
-class LTTLCHTR(serializers.ModelSerializer):
-    lstCumRap = listCumRapSerializersForLTTLCHTR(source = 'cumrap', read_only = True, many = True)
-    # maHeThongRap = serializers.ReadOnlyField(source='rap.cumRap.heThongRap.maHeThongRap')
-    # tenHeThongRap = serializers.ReadOnlyField(source='rap.cumRap.heThongRap.tenHeThongRap')
-    # logo = serializers.FileField(source='rap.cumRap.heThongRap.logo')
-    maNhom = serializers.CharField(default='GP01')
-    class Meta:
-        model = movie.models.HeThongRap
-        fields = ['lstCumRap', 'maHeThongRap', 'tenHeThongRap', 'logo', 'maNhom']
-
 class thongTinPhimSerializerForLDSPV(WritableNestedModelSerializer):
     tenCumRap = serializers.ReadOnlyField(source = 'rap.cumRap.tenCumRap')
     tenRap = serializers.ReadOnlyField(source = 'rap.tenRap')

@@ -59,10 +59,6 @@ class LayThongTinLichChieuPhimList(generics.ListAPIView):
             result.update(phim.data.pop())
         return Response(result)
 
-class LayThongTinLichChieuHeThongRapList(generics.ListAPIView):
-    serializer_class = movie.serializers.LTTLCHTR
-    queryset = movie.models.HeThongRap.objects.all()
-
 class LayDanhSachPhongVe(generics.ListAPIView):
     queryset = movie.models.lichChieuPhim.objects.all()
     serializer_class = movie.serializers.LDSPV
